@@ -1,7 +1,7 @@
 package net.iamtakagi.tsuki.database
 
-import net.iamtakagi.oyatsu.services.user.User
 import net.iamtakagi.tsuki.common.Env
+import net.iamtakagi.tsuki.services.user.User
 import org.litote.kmongo.coroutine.CoroutineClient
 import org.litote.kmongo.coroutine.CoroutineCollection
 import org.litote.kmongo.coroutine.CoroutineDatabase

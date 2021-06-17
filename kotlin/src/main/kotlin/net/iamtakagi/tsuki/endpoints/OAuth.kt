@@ -8,10 +8,10 @@ import io.ktor.client.request.*
 import io.ktor.http.*
 import io.ktor.response.*
 import io.ktor.routing.*
-import net.iamtakagi.oyatsu.services.HttpClient
-import net.iamtakagi.oyatsu.services.TwitterClient
 import net.iamtakagi.tsuki.common.respondOr404
 import net.iamtakagi.tsuki.database.users
+import net.iamtakagi.tsuki.services.HttpClient
+import net.iamtakagi.tsuki.services.TwitterClient
 import net.iamtakagi.tsuki.services.oauth.OAuthUrlResponse
 import net.iamtakagi.tsuki.services.user.User
 import net.iamtakagi.tsuki.services.user.save
