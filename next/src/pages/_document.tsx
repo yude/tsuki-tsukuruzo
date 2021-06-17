@@ -30,10 +30,7 @@ class Document extends NextDocument {
 
           <title>月作るぞ</title>
           <meta property="og:title" content="月作るぞ" />
-          <meta
-            property="og:description"
-            content="月作るぞ #tsuki_tsukuruzo"
-          />
+          <meta property="og:description" content="月作るぞ #tsuki_tsukuruzo" />
           <meta
             property="og:url"
             content="https://oyatsu-nichiyou.iamtakagi.net"
@@ -43,10 +40,7 @@ class Document extends NextDocument {
             content="https://tsuki_tsukuruzo.iamtakagi.net/tsuuki.jpg"
           />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:title"
-            content="月作るぞ"
-          />
+          <meta name="twitter:title" content="月作るぞ" />
           <meta
             name="twitter:description"
             content="月作るぞ #tsuki_tsukuruzo"

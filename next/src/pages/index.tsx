@@ -36,7 +36,7 @@ const IndexPage: React.VFC<{}> = () => {
       >
         <Flex flex={{ base: 1 }} justify={{ base: "center" }}>
           <Heading as="h2" size="xl">
-          月作るぞ #tsuki_tsukuruzo
+            月作るぞ #tsuki_tsukuruzo
           </Heading>
         </Flex>
 
@@ -52,10 +52,10 @@ const IndexPage: React.VFC<{}> = () => {
         </Flex>
 
         <Text mt="2">
-          月曜日の午前0時になると 月作るぞ
-          をするTwitterアプリです。
+          月曜日の午前0時になると 月作るぞ をするTwitterアプリです。
           <br />
-          毎週 月曜日 午前0時になると「月作るぞ #tsuki_tsukuruzo」をツイートします。
+          毎週 月曜日 午前0時になると「月作るぞ
+          #tsuki_tsukuruzo」をツイートします。
           <br />
           現在{status === null ? 0 : status.usersSize}
           人のユーザーが利用しています

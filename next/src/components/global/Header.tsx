@@ -63,9 +63,7 @@ export const Header: React.VFC<{}> = () => {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            <Link href="https://tsuki-tsukuruzo.iamtakagi.net">
-              月作るぞ
-            </Link>
+            <Link href="https://tsuki-tsukuruzo.iamtakagi.net">月作るぞ</Link>
           </Text>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
