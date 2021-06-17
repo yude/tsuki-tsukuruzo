@@ -2,6 +2,7 @@ package net.iamtakagi.tsuki.services.tweet
 
 import kotlinx.coroutines.*
 import net.iamtakagi.tsuki.database.users
+import net.iamtakagi.tsuki.services.user.tweet
 import org.quartz.Job
 import org.quartz.JobExecutionContext
 
