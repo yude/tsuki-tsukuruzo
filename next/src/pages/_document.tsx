@@ -33,11 +33,11 @@ class Document extends NextDocument {
           <meta property="og:description" content="月作るぞ #tsuki_tsukuruzo" />
           <meta
             property="og:url"
-            content="https://oyatsu-nichiyou.iamtakagi.net"
+            content="https://tsuki-tsukuruzo.iamtakagi.net"
           />
           <meta
             property="og:image"
-            content="https://tsuki_tsukuruzo.iamtakagi.net/tsuuki.jpg"
+            content="https://tsuki-tsukuruzo.iamtakagi.net/tsuuki.jpg"
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="月作るぞ" />
