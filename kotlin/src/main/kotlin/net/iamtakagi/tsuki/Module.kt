@@ -8,11 +8,11 @@ import io.ktor.routing.*
 import io.ktor.serialization.*
 import kotlinx.serialization.json.Json
 import mu.KotlinLogging
-import net.iamtakagi.oyatsu.endpoints.*
 import net.iamtakagi.tsuki.common.Env
 import net.iamtakagi.tsuki.common.createLogger
 import net.iamtakagi.tsuki.endpoints.callback
 import net.iamtakagi.tsuki.endpoints.getIndex
+import net.iamtakagi.tsuki.endpoints.getStatus
 import net.iamtakagi.tsuki.endpoints.getUrl
 import net.iamtakagi.tsuki.services.tweet.TweetsScheduler
 
