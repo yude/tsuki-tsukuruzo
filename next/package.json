@@ -1,0 +1,43 @@
+{
+  "name": "tsuki-tsukuruzo",
+  "version": "0.0.1",
+  "description": "Tsuki Tsukuruzo for Twitter App",
+  "main": "index.js",
+  "author": "takagi",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start -p $PORT",
+    "lint:prettier": "prettier . --check",
+    "lint:eslint": "eslint . --format friendly",
+    "lint": "run-p lint:*",
+    "fix:prettier": "yarn lint:prettier --write",
+    "fix:eslint": "yarn lint:eslint --fix",
+    "fix": "run-s fix:eslint fix:prettier"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^1.0.9",
+    "@chakra-ui/react": "^1.5.0",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "axios": "^0.21.1",
+    "framer-motion": "^4",
+    "next": "^10.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-hook-form": "^7.0.5",
+    "react-icons": "^4.2.0",
+    "typescript": "4.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "autoprefixer": "^10.2.5",
+    "eslint-config-react": "^1.1.7",
+    "eslint-formatter-friendly": "7.0.0",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "postcss": "8.2.4",
+    "prettier": "2.2.1"
+  }
+}

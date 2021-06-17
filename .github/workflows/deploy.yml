@@ -1,0 +1,83 @@
+name: Deploy to Docker Hub
+
+on:
+  push:
+    paths-ignore:
+      - .gitignore
+      - LICENSE
+      - '**.md'
+    branches-ignore:
+      - 'releases/**'
+
+  release:
+    types:
+      - published
+
+  workflow_dispatch:
+
+env:
+  KOTLIN_DOCKER_IMAGE: iamtakagi/tsuki-tsukuruzo_kotlin
+  NEXT_DOCKER_IMAGE: iamtakagi/tsuki-tsukuruzo_next
+
+  KOTLIN_DOCKER_CONTEXT: kotlin
+  NEXT_DOCKER_CONTEXT: next
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
+      # Kotlin
+      - name: Build & Push (master) - Kotlin
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ env.KOTLIN_DOCKER_IMAGE }}:latest
+          context: ${{ env.KOTLIN_DOCKER_CONTEXT }}
+      - name: Build & Push (dev) - Kotlin
+        if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ env.KOTLIN_DOCKER_IMAGE }}:dev
+          context: ${{ env.KOTLIN_DOCKER_CONTEXT }}
+      - name: Build & Push (Release) - Kotlin
+        if: github.event_name == 'release'
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ env.KOTLIN_DOCKER_IMAGE }}:${{ github.event.release.tag_name }}
+          context: ${{ env.KOTLIN_DOCKER_CONTEXT }}
+      
+      # Next
+      - name: Build & Push (master) - Next
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ env.NEXT_DOCKER_IMAGE }}:latest
+          context: ${{ env.NEXT_DOCKER_CONTEXT }}
+      - name: Build & Push (dev) - Next
+        if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ env.NEXT_DOCKER_IMAGE }}:dev
+          context: ${{ env.NEXT_DOCKER_CONTEXT }}
+      - name: Build & Push (Release) - Next
+        if: github.event_name == 'release'
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ env.NEXT_DOCKER_IMAGE }}:${{ github.event.release.tag_name }}
+          context: ${{ env.NEXT_DOCKER_CONTEXT }}

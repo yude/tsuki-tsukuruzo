@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+    db:
+        image: mongo
+        restart: always
+        volumes:
+            - db:/data/db
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: user
+            MONGO_INITDB_ROOT_PASSWORD: pass
+            MONGO_INITDB_DATABASE: oyatsu
+            
+    tsuki-tsukuruzo_kotlin:
+        image: iamtakagi/tsuki-tsukuruzo_kotlin:latest
+        environment:
+            TZ: Asia/Tokyo
+            HOST: 0.0.0.0
+            PORT: 8005
+            BASE_URI: /api
+            LOG: INFO
+            DB_HOST: db
+            DB_PORT: 27017
+            DB_USER: user
+            DB_PASS: pass
+            DB_NAME: tsuki
+            TWITTER_CK: xxx
+            TWITTER_CS: xxx
+            CRON: 0 0 0 ? * MON
+        restart: always
+        ports:
+            - 8005:8005
+
+    tsuki-tsukuruzo_next:
+        image: iamtakagi/tsuki-tsukuruzo_next:latest
+        environment:
+            TZ: Asia/Tokyo
+            HOST: 0.0.0.0
+            PORT: 3005
+        ports:
+            - 3005:3005
+        restart: always
+
+volumes:
+    db:
+        driver: local
