@@ -7,6 +7,7 @@ import NextDocument, {
   DocumentContext,
 } from "next/document";
 import { ColorModeScript } from "@chakra-ui/react";
+import { zeroLayout } from "framer-motion/types/render/utils/state";
 
 class Document extends NextDocument {
   static async getInitialProps(context: DocumentContext) {
@@ -15,7 +16,7 @@ class Document extends NextDocument {
   }
 
   render() {
-    return (
+    return (zeroLayout
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
