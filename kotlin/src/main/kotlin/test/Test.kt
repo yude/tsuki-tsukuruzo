@@ -1,7 +1,7 @@
 package test
 
-import net.iamtakagi.oyatsu.common.Env
-import net.iamtakagi.oyatsu.services.tweet.TweetsJob
+import net.iamtakagi.tsuki.common.Env
+import net.iamtakagi.tsuki.services.tweet.TweetsJob
 import org.quartz.CronScheduleBuilder
 import org.quartz.JobBuilder
 import org.quartz.TriggerBuilder
