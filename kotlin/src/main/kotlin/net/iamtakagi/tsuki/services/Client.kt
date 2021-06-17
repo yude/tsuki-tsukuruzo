@@ -1,4 +1,4 @@
-package net.iamtakagi.oyatsu.services
+package net.iamtakagi.tsuki.services
 
 import blue.starry.penicillin.PenicillinClient
 import blue.starry.penicillin.core.session.config.account
@@ -9,8 +9,8 @@ import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
 import io.ktor.client.features.logging.*
 import mu.KotlinLogging
-import net.iamtakagi.oyatsu.common.Env
-import net.iamtakagi.oyatsu.common.createLogger
+import net.iamtakagi.tsuki.common.Env
+import net.iamtakagi.tsuki.common.createLogger
 
 private val logger = KotlinLogging.createLogger("kotlin.client")
 

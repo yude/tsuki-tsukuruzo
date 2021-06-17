@@ -40,7 +40,7 @@ fun Application.module() {
     }
 
     install(CallLogging) {
-        logger = KotlinLogging.createLogger("oyatsu.server")
+        logger = KotlinLogging.createLogger("tsuki.server")
         format { call ->
             when (val status = call.response.status()) {
                 HttpStatusCode.Found -> "$status: ${call.request.toLogString()} -> ${call.response.headers[HttpHeaders.Location]}"
