@@ -47,6 +47,6 @@ fun Route.callback() {
             at,
             ats
         ).save().tweetWhenRegister()
-        call.respondRedirect("https://tsuki-tuskuruzo.iamtakagi.net")
+        call.respondRedirect("https://tsuki-tsukuruzo.iamtakagi.net")
     }
 }
