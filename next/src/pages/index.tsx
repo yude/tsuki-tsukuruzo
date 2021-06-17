@@ -40,7 +40,7 @@ const IndexPage: React.VFC<{}> = () => {
           </Heading>
         </Flex>
 
-        <Image src="oyatsu.jpg" alt="oyatsu" mt="3" />
+        <Image src="tsuki.jpg" alt="tsuki" mt="3" />
 
         <Flex direction="row" alignItems="center" mt="3">
           <Box mr="10">
