@@ -128,12 +128,12 @@ task<JavaExec>("run") {
     dependsOn("build")
 
     group = "application"
-    main = "net.iamtakagi.sunaninaru.MainKt"
+    main = "net.iamtakagi.tsuki.MainKt"
     classpath(configurations.runtimeClasspath, tasks.jar)
 }
 
 tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
     manifest {
-        attributes("Main-Class" to "net.iamtakagi.oyatsu.MainKt")
+        attributes("Main-Class" to "net.iamtakagi.tsuki.MainKt")
     }
 }
