@@ -37,7 +37,7 @@ class Document extends NextDocument {
           />
           <meta
             property="og:image"
-            content="https://tsuki-tsukuruzo.iamtakagi.net/tsuuki.jpg"
+            content="https://tsuki-tsukuruzo.iamtakagi.net/tsuki.jpg"
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="月作るぞ" />
